@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "eb0e8526-09a5-4ea3-9626-df28df121640",
+		"name": "desafio-lendico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register-success",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "pTZMDRLs1kPL9$cWy8cwv.DkDmWor1xpQaZK7SJXWAPVjzNO2sKja1BWkhGqyzqZLUkyN31ixqihacb95xhBmCQA9.XB4zF1n8u1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"test\",\n\t\"password\":\"1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Exemplo de registro do usuário."
+			},
+			"response": []
+		},
+		{
+			"name": "login-success",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "$6$rounds=656000$YZUHMmtA.3a9ZFCp$vYtkrqVFPsHwkGLiicd7sOOTRV7meRck7D3qXBTs6KvheJdp88GfxFFGq/4gSCg6yncxrdXsp/.YaXi6usKjj/",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test\",\n\t\"password\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Exemplo de login na API."
+			},
+			"response": []
+		},
+		{
+			"name": "consult-success",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTg2NDE5MTUsIm5iZiI6MTU1ODY0MTkxNSwianRpIjoiYTBlNGJmOWQtODMzYi00NGIyLTg0ODEtODBiZDJiZDcyN2FmIiwiZXhwIjoxNTU4NjQxOTc1LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.qAD02_L9pFEUTvmdrtsoZz1Zk-PTzR4FlaYVLqO94dg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/consult/40442820135",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consult",
+						"40442820135"
+					]
+				},
+				"description": "Exemplo de consulta na API."
+			},
+			"response": []
+		},
+		{
+			"name": "register-error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Exemplo de erro no registro."
+			},
+			"response": []
+		},
+		{
+			"name": "login-error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"teste\",\n\t\"password\": \"1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Exemplo de erro no login."
+			},
+			"response": []
+		},
+		{
+			"name": "consult-error",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTg2NDE3MzcsIm5iZiI6MTU1ODY0MTczNywianRpIjoiNDI1ODdlYWUtY2JiOC00YThhLWExNTMtYzEwOTJhZjNlZGRjIiwiZXhwIjoxNTU4NjQxNzk3LCJpZGVudGl0eSI6MSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.NaC0AZWqJqEfwCcYdlPHfMFzQRq56PAh9vddgw2C_S0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"test\",\n\t\"password\":\"1234\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/consult/40442820137",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"consult",
+						"40442820137"
+					]
+				},
+				"description": "Exemplo de erro na consulta."
+			},
+			"response": []
+		}
+	]
+}

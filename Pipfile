@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+click = "==7.0"
+coverage = "==4.5.3"
+flask-marshmallow = "==0.10.0"
+passlib = "==1.7.1"
+requests = "==2.21.0"
+marshmallow = "==2.19.0"
+marshmallow-sqlalchemy = "==0.16.3"
+Flask = "==1.0.2"
+Flask-Migrate = "==2.4.0"
+Flask-Script = "==2.0.6"
+Flask-JWT-Extended = "==3.18.2"
+Flask-SQLAlchemy = "==2.3.2"
+Markdown = "==3.1"
+PyJWT = "==1.7.1"
+SQLAlchemy = "==1.2.15"
+Flask-RESTful = "==0.3.7"
+
+[requires]
+python_version = "3.7"
