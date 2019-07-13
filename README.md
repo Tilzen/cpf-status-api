@@ -41,7 +41,7 @@ body:
 
 ```json
   "username": "<seu-nome-de-usuario>",
-  "user_token": "<uma-senha>"
+  "password": "<uma-senha>"
 ```
 
 e retorna:
@@ -101,7 +101,7 @@ e retorna:
 ## Como Executar esse Projeto
 ```bash
   ~$ docker-compose build
-  ~$ docker run -p 5000:5000 desafio-lendico
+  ~$ docker run -p 5000:5000 cpf-status-api
 ```
 
 ## Gerar as Migrações
@@ -114,7 +114,7 @@ e retorna:
 ## Como Executar os Testes e Obter a Cobertura
 ```bash
 
-  ~$ coverage run --source=app -m unittest discover -s tests/ -v
+  ~$ coverage run --source=app -m unittest discover -s . -v
 
   # mostra um resumo da cobertura no shell
   ~$ coverage report
