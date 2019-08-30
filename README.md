@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/Tilzen/cpf-status-api/badge.svg?branch=master)](https://coveralls.io/github/Tilzen/cpf-status-api?branch=master)
 # API Situação Cadastral CPF
 CPFs para testes:
 - 40442820135
